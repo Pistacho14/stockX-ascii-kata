@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.teamrocket</groupId>
-    <artifactId>frank-brunos-boxing</artifactId>
+    <artifactId>stockx-ascii-kata</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>https://github.com/Pistacho14/stockX-ascii-kata</url>
