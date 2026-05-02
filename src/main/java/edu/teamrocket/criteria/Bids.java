@@ -3,8 +3,9 @@ package edu.teamrocket.criteria;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.teamrocket.item.Offer;
+import edu.teamrocket.item.Bid;
 import edu.teamrocket.item.Item;
+import edu.teamrocket.item.Offer;
 
 
 public class Bids implements Criteria {
@@ -14,8 +15,8 @@ public class Bids implements Criteria {
         
         List<Offer> bids = new ArrayList<>();
 
-        for (Offer offer : bids) {
-            if (Offer.class.isInstance(offer)) {
+        for (Offer offer : item.offer()) {
+            if (offer instanceof Bid) {
                 bids.add(offer);
             }
         }
