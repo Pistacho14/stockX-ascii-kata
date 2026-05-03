@@ -9,4 +9,9 @@ public class Ask implements Offer {
         this.size = size;
         this.ask = ask;
     }
+
+    @Override
+    public int value () {
+        return this.ask;
+    }
 }
