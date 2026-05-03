@@ -14,4 +14,9 @@ public class Sale implements Offer{
     public int value () {
         return this.sale;
     }
+
+    @Override
+    public String size() {
+        return this.size;
+    }
 }
