@@ -15,4 +15,8 @@ public interface Item {
     public int getAsk();
 
     public void setAsk(int ask);
+
+    public void setSale(int sale);
+
+    public int getSale();
 }
