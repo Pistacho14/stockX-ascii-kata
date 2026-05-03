@@ -26,6 +26,15 @@ public class Sneaker implements Item{
     public List<Offer> offer() {
         return this.offers;
     }
-    
+
+    @Override
+    public int getBid() {
+        return this.bid;
+    }
+
+    @Override
+    public void setBid(int bid) {
+        this.bid = bid;
+    }
     
 }
