@@ -14,4 +14,9 @@ public class Ask implements Offer {
     public int value () {
         return this.ask;
     }
+
+    @Override
+    public String size() {
+        return this.size;
+    }
 }
