@@ -8,5 +8,10 @@ public class Bid implements Offer{
     public Bid(String size, Integer bid) {
         this.size = size;
         this.bid = bid;
-    }    
+    }
+
+    @Override
+    public int value () {
+        return this.bid;
+    }
 }
