@@ -8,5 +8,10 @@ public class Sale implements Offer{
     public Sale(String size, Integer sale) {
         this.size = size;
         this.sale = sale;
-    }    
+    }
+
+    @Override
+    public int value () {
+        return this.sale;
+    }
 }
