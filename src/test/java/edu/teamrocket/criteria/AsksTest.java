@@ -1,11 +1,10 @@
-package edu.teamrocket;
+package edu.teamrocket.criteria;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import edu.teamrocket.criteria.Asks;
 import edu.teamrocket.item.Ask;
 import edu.teamrocket.item.Bid;
 import edu.teamrocket.item.Item;
