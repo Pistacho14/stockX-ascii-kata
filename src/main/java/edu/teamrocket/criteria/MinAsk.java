@@ -15,7 +15,7 @@ public class MinAsk implements Criteria{
         List<Offer> bids = new ArrayList<>();
         int currentMinAsk = 0;
 
-        for (Offer offer : item.offer()) {
+        for (Offer offer : item.offers()) {
             if (bids.isEmpty()) {
                 bids.add(offer);
                 currentMinAsk = offer.value();

@@ -15,7 +15,7 @@ public class Asks implements Criteria {
         
         List<Offer> asks = new ArrayList<>();
 
-        for (Offer offer : item.offer()) {
+        for (Offer offer : item.offers()) {
             if (offer instanceof Ask) {
                 asks.add(offer);
             }

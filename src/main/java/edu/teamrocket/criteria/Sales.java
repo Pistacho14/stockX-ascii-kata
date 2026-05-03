@@ -15,7 +15,7 @@ public class Sales implements Criteria {
         
         List<Offer> sales = new ArrayList<>();
 
-        for (Offer offer : item.offer()) {
+        for (Offer offer : item.offers()) {
             if (offer instanceof Sale) {
                 sales.add(offer);
             }

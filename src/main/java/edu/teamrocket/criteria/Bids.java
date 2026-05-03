@@ -15,7 +15,7 @@ public class Bids implements Criteria {
         
         List<Offer> bids = new ArrayList<>();
 
-        for (Offer offer : item.offer()) {
+        for (Offer offer : item.offers()) {
             if (offer instanceof Bid) {
                 bids.add(offer);
             }

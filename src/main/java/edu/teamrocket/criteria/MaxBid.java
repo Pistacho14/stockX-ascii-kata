@@ -15,7 +15,7 @@ public class MaxBid implements Criteria{
         List<Offer> bids = new ArrayList<>();
         int currentMaxBid = 0;
 
-        for (Offer offer : item.offer()) {
+        for (Offer offer : item.offers()) {
             if (bids.isEmpty()) {
                 bids.add(offer);
                 currentMaxBid = offer.value();
