@@ -14,4 +14,9 @@ public class Bid implements Offer{
     public int value () {
         return this.bid;
     }
+
+    @Override
+    public String size() {
+        return this.size;
+    }
 }
