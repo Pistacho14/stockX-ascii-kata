@@ -10,5 +10,9 @@ public interface Item {
 
     public int getBid();
 
-    public void setBid (int bid);
+    public void setBid(int bid);
+
+    public int getAsk();
+
+    public void setAsk(int ask);
 }
