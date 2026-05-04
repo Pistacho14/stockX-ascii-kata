@@ -56,4 +56,11 @@ public class Sneaker implements Item{
     public int getSale() {
         return this.sale;
     }
+
+    @Override
+    public String toString() {
+        return name + "\n\t\t" + style;
+    }
+
+    
 }
