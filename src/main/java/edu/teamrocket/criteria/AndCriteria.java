@@ -1,6 +1,5 @@
 package edu.teamrocket.criteria;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import edu.teamrocket.item.Item;
@@ -18,13 +17,11 @@ public class AndCriteria implements Criteria {
 
     @Override
     public List<Offer> checkCriteria(Item item) {
+        List<Offer> offers = criteria.checkCriteria(item);
+        List<Offer> otherOffers = otherCriteria.checkCriteria(item);
 
-        List<Offer> offers = new ArrayList<>();
-        for (Offer offer : item.offers()) {
-            if (offer.getClass() == otherCriteria.getClass() && offer.size().equals(criteria.checkCriteria(item).getFirst().size())) {
-                offers.add(offer);
-            }
-        }
-        return offers;
+        return offers.stream()
+            .filter(otherOffers::contains)
+            .toList();
     }
 }
