@@ -22,7 +22,7 @@ public class AndCriteria implements Criteria {
 
         List<Offer> offers = new ArrayList<>();
         for (Offer offer : item.offers()) {
-            if (offer.getClass() == criteria.getClass() && offer.size().equals(criteria.checkCriteria(item).getFirst().size())) {
+            if (offer.getClass() == otherCriteria.getClass() && offer.size().equals(criteria.checkCriteria(item).getFirst().size())) {
                 offers.add(offer);
             }
         }
