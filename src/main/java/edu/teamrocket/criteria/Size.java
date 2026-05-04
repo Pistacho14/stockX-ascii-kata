@@ -5,7 +5,6 @@ import java.util.List;
 
 import edu.teamrocket.item.Item;
 import edu.teamrocket.item.Offer;
-import edu.teamrocket.item.Sale;
 
 public class Size implements Criteria{
 
