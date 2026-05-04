@@ -1,6 +1,7 @@
 package edu.teamrocket.criteria;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import edu.teamrocket.item.Item;
@@ -19,17 +20,13 @@ public class Max implements Criteria{
     @Override
     public List<Offer> checkCriteria(Item item) {
 
-        List<Offer> offers = new ArrayList<>();
-        int currentMaxBid = 0;
-        for (Offer offer : item.offers()) {
-            if (offer.getClass() == otherCriteria.getClass() && offer.size().equals(criteria.checkCriteria(item).getFirst().size())) {
-                if (offer.value() > currentMaxBid) {
-                    offers.addFirst(offer);
-                } else {
-                    offers.add(offer);
-                }
-            }
-        }
-        return offers;
+        List<Offer> offers = criteria.checkCriteria(item);
+        List<Offer> otherOffers = otherCriteria.checkCriteria(item);
+
+        return offers.stream()
+                .filter(otherOffers::contains)
+                .max(Comparator.comparingInt(Offer::value))
+                .map(List::of)
+                .orElse(List.of());
     }
 }
