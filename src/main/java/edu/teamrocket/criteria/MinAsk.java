@@ -5,6 +5,7 @@ import java.util.List;
 
 import edu.teamrocket.item.Item;
 import edu.teamrocket.item.Offer;
+import edu.teamrocket.item.Ask;
 
 
 public class MinAsk implements Criteria{
@@ -20,7 +21,7 @@ public class MinAsk implements Criteria{
                 bids.add(offer);
                 currentMinAsk = offer.value();
             }
-            else if (currentMinAsk > offer.value()) {
+            else if (currentMinAsk > offer.value() && offer instanceof Ask) {
                 bids.set(0, offer);
                 currentMinAsk = offer.value();
             }
