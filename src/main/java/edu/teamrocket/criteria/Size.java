@@ -20,7 +20,7 @@ public class Size implements Criteria{
 
         List<Offer> sizeOffers = new ArrayList<>();
         for (Offer offer : item.offers()) {
-            if (offer instanceof Sale && offer.size() == this.size) {
+            if (offer.size().equals(this.size)) {
                 sizeOffers.add(offer);
             }
         }
