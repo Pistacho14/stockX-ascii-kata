@@ -5,6 +5,7 @@ import java.util.List;
 
 import edu.teamrocket.item.Item;
 import edu.teamrocket.item.Offer;
+import edu.teamrocket.item.Bid;
 
 
 public class MaxBid implements Criteria{
@@ -20,7 +21,7 @@ public class MaxBid implements Criteria{
                 bids.add(offer);
                 currentMaxBid = offer.value();
             }
-            else if (currentMaxBid < offer.value()) {
+            else if (currentMaxBid < offer.value() && offer instanceof Bid) {
                 bids.set(0, offer);
                 currentMaxBid = offer.value();
             }
