@@ -1,6 +1,5 @@
 package edu.teamrocket.criteria;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class Min implements Criteria {
 
         return offers.stream()
                 .filter(otherOffers::contains)
-                .min(Comparator.comparingInt(Offer::value))
+                .min(Comparator.naturalOrder())
                 .map(List::of)
                 .orElse(List.of());
     }
