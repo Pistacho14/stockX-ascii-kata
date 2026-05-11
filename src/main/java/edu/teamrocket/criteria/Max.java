@@ -1,6 +1,5 @@
 package edu.teamrocket.criteria;
 
-import java.util.Comparator;
 import java.util.List;
 
 import edu.teamrocket.item.Item;
@@ -24,7 +23,7 @@ public class Max implements Criteria{
 
         return offers.stream()
                 .filter(otherOffers::contains)
-                .max(Comparator.naturalOrder())
+                .max(Offer::compareTo)
                 .map(List::of)
                 .orElse(List.of());
     }
