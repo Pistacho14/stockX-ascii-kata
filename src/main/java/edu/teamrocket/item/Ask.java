@@ -1,28 +1,20 @@
 package edu.teamrocket.item;
 
-public class Ask implements Offer {
-    
-    private String size;
-    private Integer ask;
-
-    public Ask(String size, Integer ask) {
-        this.size = size;
-        this.ask = ask;
-    }
+public final record Ask(String size, Integer ask) implements Offer{
 
     @Override
     public int value () {
-        return this.ask;
+        return ask;
     }
 
     @Override
     public String size() {
-        return this.size;
+        return size;
     }
 
     @Override
     public int compareTo(Offer offer) {
-        return this.ask.compareTo(offer.value());
+        return ask.compareTo(offer.value());
     }
 
     @Override
