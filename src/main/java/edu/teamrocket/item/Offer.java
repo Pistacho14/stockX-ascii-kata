@@ -1,6 +1,7 @@
 package edu.teamrocket.item;
 
-public interface Offer extends Comparable<Offer>{
+public sealed interface Offer extends Comparable<Offer>
+    permits Sale, Bid, Ask{
 
     public int value();
 
