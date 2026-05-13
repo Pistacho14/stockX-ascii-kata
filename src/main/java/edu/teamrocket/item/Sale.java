@@ -1,28 +1,20 @@
 package edu.teamrocket.item;
 
-public class Sale implements Offer{
-    
-    private String size;
-    private Integer sale;
-
-    public Sale(String size, Integer sale) {
-        this.size = size;
-        this.sale = sale;
-    }
+public final record Sale(String size, Integer sale) implements Offer{
 
     @Override
-    public int value () {
-        return this.sale;
+    public int value() {
+        return sale;
     }
 
     @Override
     public String size() {
-        return this.size;
+        return size;
     }
 
     @Override
     public int compareTo(Offer offer) {
-        return this.sale.compareTo(offer.value());
+        return sale.compareTo(offer.value());
     }
 
     @Override
