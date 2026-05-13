@@ -1,28 +1,20 @@
 package edu.teamrocket.item;
 
-public class Bid implements Offer{
-    
-    private String size;
-    private Integer bid;
-
-    public Bid(String size, Integer bid) {
-        this.size = size;
-        this.bid = bid;
-    }
+public final record Bid(String size, Integer bid) implements Offer{
 
     @Override
     public int value () {
-        return this.bid;
+        return bid;
     }
 
     @Override
     public String size() {
-        return this.size;
+        return size;
     }
 
     @Override
     public int compareTo(Offer offer) {
-        return this.bid.compareTo(offer.value());
+        return bid.compareTo(offer.value());
     }
 
     @Override
